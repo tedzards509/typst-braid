@@ -6,11 +6,11 @@
         height: crossings.len() * unit_height,
         
         for (idx, crossing) in crossings.enumerate() {
-            if not crossing.has("bottom") {
+            if not crossing.has("b") {
                 panic("A crossing is missing an index.")
             }
 
-            let index = int(crossing.bottom.text) - 1
+            let index = int(crossing.b.text) - 1
             for i in range(strands) {
                 if i != index and i != index + 1 {
                     place(
